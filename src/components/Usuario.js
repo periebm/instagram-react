@@ -19,7 +19,7 @@ export default function Usuario(props){
 
     return(
         <div class="usuario">
-        <img data-test="edit-name" onClick={changeImg} src={img} alt="imagem de perfil" />
+        <img data-test="profile-image" onClick={changeImg} src={img} alt="imagem de perfil" />
         <div class="texto">
           <span>
             <strong data-test="name" >{name}</strong>
