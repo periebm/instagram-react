@@ -1,82 +1,18 @@
+import Post from "./Post"
+
 export default function Posts(){
+  let posts_data = [
+    {user: "meowed", img_user: "assets/img/meowed.svg",img_post: "assets/img/gato-telefone.svg",user_like: "respondeai", user_like_img:"assets/img/respondeai.svg", likes: 101.523},
+    {user: "barked", img_user: "assets/img/barked.svg",img_post: "assets/img/dog.svg", user_like: "adorable animals", user_like_img: "assets/img/adorable_animals.svg", likes: 99.159},
+    {user: "9gag", img_user: "assets/img/9gag.svg",img_post: "assets/img/9gagpost.jpeg", user_like: "bad.vibes.memes", user_like_img: "assets/img/bad.vibes.memes.svg", likes: 56.900}
+
+  ]
+
     return(
         <div class="posts">
-        <div class="post">
-          <div class="topo">
-            <div class="usuario">
-              <img src="assets/img/meowed.svg" alt="meowed" />
-              meowed
-            </div>
-            <div class="acoes">
-              <ion-icon name="ellipsis-horizontal"></ion-icon>
-            </div>
-          </div>
 
-          <div class="conteudo">
-            <img src="assets/img/gato-telefone.svg" alt="gato-telefone" />
-          </div>
+      {posts_data.map((p) => <Post user={p.user} img_user={p.img_user} img_post={p.img_post} user_like={p.user_like} user_like_img={p.user_like_img} likes={p.likes}/>)}
 
-          <div class="fundo">
-            <div class="acoes">
-              <div>
-                <ion-icon name="heart-outline"></ion-icon>
-                <ion-icon name="chatbubble-outline"></ion-icon>
-                <ion-icon name="paper-plane-outline"></ion-icon>
-              </div>
-              <div>
-                <ion-icon name="bookmark-outline"></ion-icon>
-              </div>
-            </div>
-
-            <div class="curtidas">
-              <img src="assets/img/respondeai.svg" alt="respondeai" />
-              <div class="texto">
-                Curtido por <strong>respondeai</strong> e{" "}
-                <strong>outras 101.523 pessoas</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="post">
-          <div class="topo">
-            <div class="usuario">
-              <img src="assets/img/barked.svg" alt="barked" />
-              barked
-            </div>
-            <div class="acoes">
-              <ion-icon name="ellipsis-horizontal"></ion-icon>
-            </div>
-          </div>
-
-          <div class="conteudo">
-            <img src="assets/img/dog.svg" alt="dog" />
-          </div>
-
-          <div class="fundo">
-            <div class="acoes">
-              <div>
-                <ion-icon name="heart-outline"></ion-icon>
-                <ion-icon name="chatbubble-outline"></ion-icon>
-                <ion-icon name="paper-plane-outline"></ion-icon>
-              </div>
-              <div>
-                <ion-icon name="bookmark-outline"></ion-icon>
-              </div>
-            </div>
-
-            <div class="curtidas">
-              <img
-                src="assets/img/adorable_animals.svg"
-                alt="adorable_animals"
-              />
-              <div class="texto">
-                Curtido por <strong>adorable_animals</strong> e{" "}
-                <strong>outras 99.159 pessoas</strong>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     )
 }
